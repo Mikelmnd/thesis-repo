@@ -1,0 +1,11 @@
+In order to deploy server perform the following process:
+1. sudo docker build -t server-cont .
+2. sudo docker run -p 12345:12345 -it  server-cont bash
+3. In a second terminal run:
+sudo docker isnpect "container_id_here"
+and find the container ip. Replace the ip in the common.sh on both client and server.
+4. Return to termina where you have bashed in the container and run
+bash scripts/run-server.sh SCI_HE resnet50
+5. Deploy client
+
+
